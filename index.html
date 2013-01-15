@@ -68,57 +68,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <title>Front End Regionalisation</title>
     
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
-
-    <!--
-        
-        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
-        presentation to work.
-        
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-        
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-        
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-        
-    -->
     <link href="css/impress-demo.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
 
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
 <body class="impress-not-supported">
 
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
 <div class="fallback-message">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
@@ -164,8 +127,9 @@
         It will not be rotated or scaled.
         
     -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
+    <div id="title-slide" class="step slide" data-x="-1000" data-y="-1500">
+        <q>Understanding regional differences in the <b>Front End.</b> <br /><br /></q>
+        <p>A view from 10,000 ft</p>
     </div>
 
     <!--
@@ -183,12 +147,16 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+    <div id="introduction" class="step slide" data-x="0" data-y="-1500">
+        <q><strong>Questions to answer:</strong></q><br />
+        <p>How much code exists in our base logic?</p><br />
+        <p>How much code exists in our regional logic?</p><br />
+        <p>What areas need regional overwriting?</p><br />
+        <p>What changes are driven by the BE or FE?</p><br />
     </div>
-
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    
+    <div id="getstarted" class="step" data-x="1000" data-y="-1500" data-scale="0.5">
+        <p>let's get <b>started</b>... </p>
     </div>
 
     <!--
@@ -201,10 +169,10 @@
         down (4 times) to make it back to it's correct size.
         
     -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4" >
+        <span class="try">Base logic is </span>
+        <h1>7000 lines<sup>*</sup></h1>
+        <span class="footnote"><sup>*</sup> and growing</span>
     </div>
 
     <!--
@@ -215,10 +183,13 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    <div id="code-diagram" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+      <div id="base-circle" class="circle circle-large blue"><span class="small top">Base code:</span><h2>7000</h2></div>
+      <div id="za-circle" class="circle circle-medium green float-left"><span class="small top">ZA code:</span><h2>2000</h2></div>
+      <div id="ca-circle" class="circle circle-medium green float-left"><span class="small top">CA code:</span><h2>2000</h2></div>
+      <div id="wb-circle" class="circle circle-small black float-left"><span class="small top">WB code:</span><h4>700</h4></div>
+      <div id="pl-circle" class="circle circle-small black float-left"><span class="small top">PL code:</span><h4>700</h4></div>
+      <div id="uk-circle" class="circle circle-small black float-left"><span class="small top">UK code:</span><h4>700</h4></div>
     </div>
 
     <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">

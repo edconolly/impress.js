@@ -268,7 +268,7 @@ a:focus {
 }
 
 #title h1 {
-    font-size: 190px;
+    font-size: 180px;
     
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
@@ -701,3 +701,147 @@ a:focus {
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
     for you.
 */
+
+
+.circle-small {
+    line-height: 150px;
+    font-size: 70%;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 75px; 
+}
+
+.circle-medium {
+    line-height: 200px;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px; 
+}
+
+.circle-large {
+    line-height: 400px;
+    width: 400px;
+    height: 400px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px; 
+}
+
+.circle {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top:-120px;
+  opacity: 0;
+}
+
+.present .circle {
+  opacity: 1;
+}
+
+.circle .top {
+  position: absolute;  
+}
+
+.circle-large .top {
+  top:-10%;
+  left:34%;  
+}
+
+.circle-medium .top {
+  top:-20%;
+  right:13%;  
+}
+
+.circle-small .top {
+  top:-16%;
+  right:30%;  
+}
+
+#base-circle {z-index: 1000;}
+
+h2 {font-size: 150%;}
+h3 {font-size: 130%;}
+h3 {font-size: 120%;}
+h4 {font-size: 110%;}
+.small {font-size: 60%;}
+.float-left {float:left;}
+
+.blue {background-color: #008fd5}
+.green {background-color: #00a360}
+.black {background-color: #3b3b3b}
+.red{background-color: #cc0000}
+
+.present #za-circle {
+  -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    -webkit-transition: opacity 1s 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s 1s,         transform 0.5s 1s;
+}
+
+.present #ca-circle {
+  -webkit-transform: translate(220px,400px);
+    -moz-transform:    translate(220px,400px);
+    -ms-transform:     translate(220px,400px);
+    -o-transform:      translate(220px,400px);
+    transform:         translate(220px,400px);
+
+    -webkit-transition: opacity 1s 2s, -webkit-transform 0.5s 2s;
+    -moz-transition:    opacity 1s 2s,    -moz-transform 0.5s 2s;
+    -ms-transition:     opacity 1s 2s,     -ms-transform 0.5s 2s;
+    -o-transition:      opacity 1s 2s,      -o-transform 0.5s 2s;
+    transition:         opacity 1s 2s,         transform 0.5s 2s;
+}
+
+.present #uk-circle {
+  -webkit-transform: translate(380px,290px);
+    -moz-transform:    translate(380px,290px);
+    -ms-transform:     translate(380px,290px);
+    -o-transform:      translate(380px,290px);
+    transform:         translate(380px,290px);
+
+    -webkit-transition: opacity 1s 3s, -webkit-transform 0.5s 3s;
+    -moz-transition:    opacity 1s 3s,    -moz-transform 0.5s 3s;
+    -ms-transition:     opacity 1s 3s,     -ms-transform 0.5s 3s;
+    -o-transition:      opacity 1s 3s,      -o-transform 0.5s 3s;
+    transition:         opacity 1s 3s,         transform 0.5s 3s;
+}
+
+.present #pl-circle {
+  -webkit-transform: translate(420px,120px);
+    -moz-transform:    translate(420px,120px);
+    -ms-transform:     translate(420px,120px);
+    -o-transform:      translate(420px,120px);
+    transform:         translate(420px,120px);
+
+    -webkit-transition: opacity 1s 4s, -webkit-transform 0.5s 4s;
+    -moz-transition:    opacity 1s 4s,    -moz-transform 0.5s 4s;
+    -ms-transition:     opacity 1s 4s,     -ms-transform 0.5s 4s;
+    -o-transition:      opacity 1s 4s,      -o-transform 0.5s 4s;
+    transition:         opacity 1s 4s,         transform 0.5s 4s;
+}
+
+.present #wb-circle {
+  -webkit-transform: translate(370px,-40px);
+    -moz-transform:    translate(370px,-40px);
+    -ms-transform:     translate(370px,-40px);
+    -o-transform:      translate(370px,-40px);
+    transform:         translate(370px,-40px);
+
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 5s;
+    transition:         opacity 1s 5s,         transform 0.5s 5s;
+}
